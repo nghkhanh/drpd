@@ -7,7 +7,9 @@ authors = [
   { name = "Nguyen Huu Khanh", email = "khanhtiendt686@gmail.com" },
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "tiktoken>=0.12.0",
+]
 
 [dependency-groups]
 dev = [
