@@ -1,0 +1,6 @@
+app_name = "Drpd"
+
+# Application settings
+app:
+  log_file: "_logs/drpd.log"
+
