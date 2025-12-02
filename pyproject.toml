@@ -9,6 +9,7 @@ authors = [
 requires-python = ">=3.11"
 dependencies = [
     "openai>=2.8.1",
+    "polar>=0.0.127",
     "tiktoken>=0.12.0",
 ]
 

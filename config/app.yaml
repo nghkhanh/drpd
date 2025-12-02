@@ -9,3 +9,7 @@ llm:
   temperature: 0.2
   max_tokens_output: 1000
   system_message: "You are a helpful and excellent research assistant."
+
+embed:
+  url: 
+  model:
