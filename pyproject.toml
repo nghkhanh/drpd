@@ -1,0 +1,10 @@
+[project]
+name = "drpd"
+version = "0.1.0"
+description = "Nghiên cứu chuyên sâu trên các tài liệu, văn bản, nghị định,... được tải lên để tìm ra sự thay đổi, chồng chéo giữa chúng. Không sử dụng tìm kiếm trên Web, đảm bảo riêng tư bảo mật tài liệu."
+readme = "README.md"
+authors = [
+  { name = "Nguyen Huu Khanh", email = "khanhtiendt686@gmail.com" },
+]
+requires-python = ">=3.11"
+dependencies = []

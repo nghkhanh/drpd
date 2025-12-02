@@ -1,0 +1,1 @@
+## Nghiên cứu chuyên sâu trên các tài liệu, văn bản, nghị định,... được tải lên để tìm ra sự thay đổi, chồng chéo giữa chúng. Không sử dụng tìm kiếm trên Web, đảm bảo riêng tư bảo mật tài liệu.
