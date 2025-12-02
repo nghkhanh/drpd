@@ -1,6 +1,11 @@
-app_name = "Drpd"
+app_name: "Drpd"
 
 # Application settings
 app:
   log_file: "_logs/drpd.log"
 
+# LLM settings
+llm:
+  temperature: 0.2
+  max_tokens_output: 1000
+  system_message: "You are a helpful and excellent research assistant."

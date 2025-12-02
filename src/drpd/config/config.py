@@ -15,7 +15,7 @@ class Config:
             self._load_config()
     
     def _load_config(self):
-        config_path = Path(__file__).resolve().parent[3] / "config" / "app.yaml"
+        config_path = Path(__file__).resolve().parent.parent.parent.parent / "config" / "app.yaml"
         try:
             with open(config_path, "r", encoding="utf-8") as f:
                 self._config = yaml.safe_load(f)
