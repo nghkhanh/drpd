@@ -7,7 +7,7 @@ from drpd.config import app_config
 class BaseEmbedding(ABC):
     """Abstract base class for embedding managers."""
     @abstractmethod
-    def embed(self, texts: Union[str, List[str]], normalize: bool = True, **kwargs) -> np.ndarray:
+    def embed(self, texts: Union[str, List[str]], **kwargs) -> np.ndarray:
         """Convert text into embedding."""
         pass
 
@@ -22,7 +22,7 @@ class EmbeddingModel(BaseEmbedding):
         self.url = app_config["embedding"]["url"]
         self.model = app_config["embedding"]["model"]
     
-    def embed(self, texts, normalize = True, batch_size = 32) -> np.ndarray:
+    def embed(self, texts, batch_size = 32) -> np.ndarray:
         """Generate embedding for input text."""
         if isinstance(texts, str):
             texts = [texts]
