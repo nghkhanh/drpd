@@ -10,6 +10,6 @@ llm:
   max_tokens_output: 1000
   system_message: "You are a helpful and excellent research assistant."
 
-embed:
-  url: 
-  model:
+embedding:
+  url: "http://10.0.130.5:8092/v1/embeddings"
+  model: "bge-m3"
