@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.11"
 dependencies = [
+    "click>=8.3.1",
     "openai>=2.8.1",
     "polar>=0.0.127",
     "tiktoken>=0.12.0",
@@ -18,9 +19,55 @@ dev = [
     "pre-commit>=4.5.0",
     "pytest>=9.0.1",
     "ruff>=0.14.7",
+    "ty>=0.0.6",
 ]
 
 [tool.pytest.ini_options]
-pythonpath = [
-  "src"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+pythonpath = ["src"]
+python_functions = ["test_*"]
+
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+extend-select = [
+    "F",        # Pyflakes rules
+    "W",        # PyCodeStyle warnings
+    "E",        # PyCodeStyle errors
+    "I",        # Sort imports properly
+    "UP",       # Warn if certain things can changed due to newer Python versions
+    "C4",       # Catch incorrect use of comprehensions, dict, list, etc
+    "FA",       # Enforce from __future__ import annotations
+    "ISC",      # Good use of string concatenation
+    "ICN",      # Use common import conventions
+    "RET",      # Good return practices
+    "SIM",      # Common simplification rules
+    "TID",      # Some good import practices
+    "TC",       # Enforce importing certain types in a TYPE_CHECKING block
+    "PTH",      # Use pathlib instead of os.path
+    "TD",       # Be diligent with TODO comments
+    "NPY",      # Some numpy-specific things
 ]
+
+ignore = [
+    "E501",  # line length (handled by formatter)
+    "TD003", # link TODO
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+
+[tool.ty.src]
+include = ["src", "tests"]
+exclude = ["**/__pycache__"]
+
+[tool.ty.rules]
+non-subscriptable = "ignore"
+possibly-missing-attribute = "ignore"
+invalid-parameter-default = "ignore"
