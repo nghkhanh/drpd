@@ -21,7 +21,7 @@ class Config:
             Path(__file__).resolve().parent.parent.parent.parent / "config" / "app.yaml"
         )
         try:
-            with Path.open()(config_path, encoding="utf-8") as f:
+            with config_path.open(encoding="utf-8") as f:
                 self._config = yaml.safe_load(f)
         except FileNotFoundError:
             raise FileNotFoundError(f"Configuration file not found at: {config_path}")
