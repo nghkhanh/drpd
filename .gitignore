@@ -5,3 +5,11 @@ __pycache__/
 
 # system
 .env
+
+# macOS
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+uv.lock
